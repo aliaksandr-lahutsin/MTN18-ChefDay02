@@ -1,6 +1,18 @@
 # MTN18-ChefDay02
 
+=========================================================================================
+
 vagrant up
+
+OR
+
+kitchen create <name>
+
+kitchen converge <name>
+
+==========================================================================================
+
+yum install git
 
 git clone -b day02 https://github.com/aliaksandr-lahutsin/MTN18-ChefDay02.git
 
