@@ -1,44 +1,21 @@
-## Getting Involved
+# Contributing
 
-New contributors are always welcome, when it doubt please ask questions. We strive to be an open and welcoming
-community. Please be nice to one another.
+## Branches
 
-### Coding
+### `master` branch
 
-* Pick a task:
-  * Offer feedback on open [pull requests](https://github.com/vrivellino/chef-java_se/pulls).
-  * Review open [issues](https://github.com/vrivellino/chef-java_se/issues) for things to help on.
-  * [Create an issue](https://github.com/vrivellino/chef-java_se/issues/new) to start a discussion on additions or features.
-* Fork the project, add your changes and tests to cover them in a topic branch.
-* Commit your changes and rebase against `vrivellino/chef-java_se` to ensure everything is up to date.
-* [Submit a pull request](https://github.com/vrivellino/chef-java_se/compare/).
+The master branch is the current committed changes. These changes may not yet be released although we try to release often.
 
-### Updating Release
+## Tags
 
-* Create branch e.g., `git checkout -b 9.0.1`
-* Update `CHANGLOG.md`
-* Update Java SE JDK version in `README.md` 
-* Update build and update version, and checksums in `attributes/bind.rb`
-* Update version in `metadata.rb`
-* Update BUILD and VERSION_UPDATE in `spec/spec_helper.rb`
-* Update VERSION in `test/integration/alt_home/serverspec/spec_helper.rb`
-* Update VERSION in `test/integration/default/serverspec/spec_helper.rb`
-* Push to GitHub to integration test Linux and Windows
-* Merge to macosx branch not overriding .travis.yml e.g.,
-    * `git checkout macosx`
-    * `git merge --no-commit 9.0.1`
-    * `git reset HEAD .travis.yml`
-    * `git checkout -- .travis.yml`
-    * `git commit -m 'merged 9.0.1'`
-* Push to GitHub to integration test Mac OS X 
-* Merge to master e.g.,
-    * `git checkout master`
-    * `git merge 9.0.1`
-* Push to GitHub 
-* Cut a Release
-* Push to supermarket.chef.io
+All releases are tagged in git. To see the releases available to you see the changelog or the tags directly.
 
-### Non-Coding
+## Pull requests
 
-* Offer feedback on open [issues](https://github.com/vrivellino/chef-java_se/issues).
-* Organize or volunteer at events.
+- <https://github.com/sous-chefs/java/pulls>
+
+## Issues
+
+Need to report an issue? Use the github issues:
+
+- <https://github.com/sous-chefs/java/issues>
