@@ -1,3 +1,5 @@
+include_recipe 'java'
+
 if node['jboss']['skip']
   Chef::Log.warn('Skipping install of Jboss!')
 else
