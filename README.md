@@ -6,9 +6,9 @@ vagrant up
 
 OR
 
-kitchen create <name>
+kitchen create %name>
 
-kitchen converge <name>
+kitchen converge %name>
 
 ==========================================================================================
 
