@@ -1,0 +1,5 @@
+# frozen_string_literal: true
+cookbook 'java', '~> 2.0.1'
+source 'https://supermarket.chef.io'
+
+metadata
