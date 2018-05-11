@@ -2,10 +2,10 @@ require 'serverspec'
 set :backend, :exec
 
 
-if node.role?('jboss_server')
-  web_type = 'jboss'
-elsif node.role?('tomcat_server')
-  web_type = 'tomcat'
+if node.role?('apache_web_server')
+  web_type = 'httpd'
+elsif node.role?('nginx_web_server')
+  web_type = 'nginx'
 end
 
 describe "package is installed" do
@@ -22,6 +22,15 @@ end
 
 describe "port are listened" do
 	it "port are listened" do
-		expect(port(8080)).to be_listening
+		expect(port(80)).to be_listening
 	end
+end
+
+require 'net/http'
+describe 'Build art check' do
+  it 'Webapp response is 200' do
+     url = URI("http://127.0.0.1/")
+     status_response = Net::HTTP.get_response(url)
+     expect status_response.kind_of? Net::HTTPSuccess
+  end
 end

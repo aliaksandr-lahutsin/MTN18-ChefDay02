@@ -1,7 +1,0 @@
-{
-  "name": "tomcat_server",
-  "description": "jboss",
-  "run_list": [
-    "recipe[web_server]"
-  ]
-}
