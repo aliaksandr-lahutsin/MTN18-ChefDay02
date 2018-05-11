@@ -1,0 +1,7 @@
+{
+  "name": "tomcat_server",
+  "description": "tomcat",
+  "run_list": [
+    "recipe[web_server]"
+  ]
+}
