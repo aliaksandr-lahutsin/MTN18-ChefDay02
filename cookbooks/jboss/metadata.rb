@@ -1,10 +1,12 @@
-name             'jboss'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
-license          'All rights reserved'
-description      'Installs/Configures jboss'
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+name 'jboss'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'All Rights Reserved'
+description 'Installs/Configures jboss'
+long_description 'Installs/Configures jboss'
+version '0.1.2'
+chef_version '>= 12.1' if respond_to?(:chef_version)
 
 
+# dependencies
 depends 'java'
