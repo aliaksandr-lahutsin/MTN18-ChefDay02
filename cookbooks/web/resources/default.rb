@@ -2,7 +2,7 @@ actions :install, :setup, :stop, :start, :restart, :reload, :attach, :detach
 attribute :name, :kind_of => String, :name_attribute => true
 attribute :some_fun, :kind_of => String
 property :role, String, default: 'app_server'
-property :del_server, String, default: '192.168.1.1'
+property :del_server, String, default: '192.168.10.12'
 
 action :attach do
   result = ""
