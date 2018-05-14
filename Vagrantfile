@@ -12,7 +12,6 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--memory", 2048]
         v.customize ["modifyvm", :id, "--name", "chef-server"]
       end
-      ms.vm.provision "shell" , path: "./install.sh"
     end
 
     config.vm.define "node-jboss".to_sym do |tc|
