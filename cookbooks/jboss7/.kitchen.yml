@@ -1,0 +1,24 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: geerlingguy/centos7
+
+suites:
+  - name: default
+    driver:
+      vm_hostname: jboss
+      network:
+      - ["private_network", {ip: "192.168.10.12"}]
+    run_list:
+      - recipe[jboss7::default]
+      - recipe[jboss7::deploy]      
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
+
